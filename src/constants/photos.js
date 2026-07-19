@@ -47,5 +47,8 @@ export const photosList = [
   { id: 46, title: "Best Presenter Certificate", category: "Honors", src: "/photos/Screenshot_2026-07-19-23-46-05-27_99c04817c0de5652397fc8b56c3b3817.jpg" },
   { id: 47, title: "Smart Agro Hackathon Award", category: "Honors", src: "/photos/Screenshot_2026-07-19-23-46-12-73_99c04817c0de5652397fc8b56c3b3817.jpg" },
   { id: 48, title: "Yuva Tech Fest Vice President Badge", category: "Leadership", src: "/photos/Screenshot_2026-07-19-23-56-24-31_99c04817c0de5652397fc8b56c3b3817.jpg" },
-  { id: 49, title: "Class Lead Commendation", category: "Honors", src: "/photos/Screenshot_2026-07-19-23-56-28-59_99c04817c0de5652397fc8b56c3b3817.jpg" }
+  { id: 49, title: "Class Lead Commendation", category: "Honors", src: "/photos/Screenshot_2026-07-19-23-56-28-59_99c04817c0de5652397fc8b56c3b3817.jpg" },
+  { id: 50, title: "Special Moment 1", category: "Memories", src: "/photos/WhatsApp Image 2026-07-20 at 00.30.57 (1).jpeg" },
+  { id: 51, title: "Special Moment 2", category: "Memories", src: "/photos/WhatsApp Image 2026-07-20 at 00.30.57.jpeg" },
+  { id: 52, title: "Special Moment 3", category: "Memories", src: "/photos/WhatsApp Image 2026-07-20 at 00.32.41.jpeg" }
 ];
