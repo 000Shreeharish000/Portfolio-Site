@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-function Navigation({ onExploreProjects }) {
+function Navigation({ onExploreProjects, onOpenGallery }) {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
@@ -25,9 +25,12 @@ function Navigation({ onExploreProjects }) {
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#gallery">
+        <button
+          onClick={onOpenGallery}
+          className="nav-link cursor-pointer hover:text-orange-400 transition-colors"
+        >
           Gallery
-        </a>
+        </button>
       </li>
       <li className="nav-li">
         <button
@@ -51,7 +54,7 @@ function Navigation({ onExploreProjects }) {
   );
 }
 
-const Navbar = ({ onExploreProjects }) => {
+const Navbar = ({ onExploreProjects, onOpenGallery }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
@@ -74,7 +77,10 @@ const Navbar = ({ onExploreProjects }) => {
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation onExploreProjects={onExploreProjects} />
+            <Navigation
+              onExploreProjects={onExploreProjects}
+              onOpenGallery={onOpenGallery}
+            />
           </nav>
         </div>
       </div>
@@ -87,7 +93,10 @@ const Navbar = ({ onExploreProjects }) => {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation onExploreProjects={onExploreProjects} />
+            <Navigation
+              onExploreProjects={onExploreProjects}
+              onOpenGallery={onOpenGallery}
+            />
           </nav>
         </motion.div>
       )}
