@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-function Navigation() {
+
+function Navigation({ onExploreProjects }) {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
@@ -24,6 +25,14 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-li">
+        <button
+          onClick={onExploreProjects}
+          className="text-xs font-semibold px-3 py-1 rounded-lg bg-blue-600/20 hover:bg-blue-600/40 text-blue-300 border border-blue-500/30 transition-all cursor-pointer"
+        >
+          Explore All 3D
+        </button>
+      </li>
+      <li className="nav-li">
         <a className="nav-link" href="#achievements">
           Achievements
         </a>
@@ -36,7 +45,8 @@ function Navigation() {
     </ul>
   );
 }
-const Navbar = () => {
+
+const Navbar = ({ onExploreProjects }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
@@ -59,7 +69,7 @@ const Navbar = () => {
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation />
+            <Navigation onExploreProjects={onExploreProjects} />
           </nav>
         </div>
       </div>
@@ -72,7 +82,7 @@ const Navbar = () => {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onExploreProjects={onExploreProjects} />
           </nav>
         </motion.div>
       )}

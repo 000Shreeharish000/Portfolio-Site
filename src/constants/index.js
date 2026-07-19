@@ -1,6 +1,42 @@
 export const myProjects = [
   {
     id: 1,
+    title: "Digital Governance Ecosystem Audit System",
+    description:
+      "Enterprise-grade AI-powered fraud detection and compliance governance system built on graph intelligence, multi-agent orchestration, and cryptographic audit trails (Decision & Financial Digital Twin Platform).",
+    subDescription: [
+      "Top 50 Deloitte Hackathon | 5-agent AI orchestration pipeline (GenW Agent Builder) executing graph analysis, policy evaluation, counterfactual reasoning, and automated remediation.",
+      "Real-time NetworkX MultiDiGraph engine constructed from 50,000+ enterprise ERP records with 6 built-in fraud detection rules, control bypass algorithms, and collusion path detection.",
+      "Cryptographic blockchain-style append-only audit chain with HMAC-SHA256 signatures, zero-randomness deterministic AI reasoning, and interactive 3D graph explorer (Three.js)."
+    ],
+    href: "https://github.com/000Shreeharish000/Audit-Analytics-System",
+    logo: "",
+    image: "/assets/projects/audit-analytics.png",
+    tags: [
+      {
+        id: 1,
+        name: "Python / NetworkX",
+        path: "/assets/logos/cplusplus.svg",
+      },
+      {
+        id: 2,
+        name: "FastAPI",
+        path: "/assets/logos/vitejs.svg",
+      },
+      {
+        id: 3,
+        name: "Next.js / Three.js",
+        path: "/assets/logos/threejs.svg",
+      },
+      {
+        id: 4,
+        name: "SQLite / Cryptography",
+        path: "/assets/logos/sqlite.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Medical ERP System for SRM Trichy Hospital",
     description:
       "Designed a role-based Hospital ERP system supporting 7+ user roles (Doctor, Nurse, Ambulance, Logistics, etc.) with strict RBAC, workflow isolation, and audit logging across all modules.",
@@ -36,7 +72,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Core Java Attendance Management System",
     description:
       "Built a pure Java attendance tracking system using Core Java, Java Swing, JDBC, and MySQL with a modular GUI and custom persistence layer.",
@@ -68,42 +104,6 @@ export const myProjects = [
         id: 4,
         name: "Swing",
         path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Financial Digital Twin Platform (Analytics & Automation)",
-    description:
-      "A graph-based Financial Digital Twin Platform that analyzes 50,000+ ERP records to detect collusion, approval bypasses, invoice splitting, and compliance violations.",
-    subDescription: [
-      "Placed in Top 50 of the Deloitte Hackathon.",
-      "Designed a 4-agent AI orchestration system for graph analysis, policy evaluation, counterfactual reasoning, and automated investigation report generation with risk scoring.",
-      "Engineered secure audit infrastructure using cryptographic audit trails and HMAC signatures."
-    ],
-    href: "https://github.com/000Shreeharish000",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Python",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "FastAPI",
-        path: "/assets/logos/vitejs.svg",
-      },
-      {
-        id: 3,
-        name: "Next.js",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 4,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
       },
     ],
   },

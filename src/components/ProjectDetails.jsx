@@ -9,39 +9,56 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 w-full h-full overflow-y-auto backdrop-blur-md bg-black/60">
       <motion.div
-        className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
-        initial={{ opacity: 0, scale: 0.5 }}
+        className="relative w-full max-w-2xl border shadow-2xl rounded-2xl bg-gradient-to-br from-neutral-900 via-midnight to-navy border-white/10 overflow-hidden"
+        initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.85 }}
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute z-10 p-2 rounded-full top-4 right-4 bg-black/50 hover:bg-neutral-800 text-white transition-colors"
+          aria-label="Close modal"
         >
-          <img src="assets/close.svg" className="w-6 h-6" />
+          <img src="assets/close.svg" className="w-5 h-5" alt="close" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
-        <div className="p-5">
-          <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
-          <p className="mb-3 font-normal text-neutral-400">{description}</p>
-          {subDescription.map((subDesc, index) => (
-            <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
-          ))}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+        <div className="relative w-full h-64 overflow-hidden">
+          <img src={image} alt={title} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
+        </div>
+        <div className="p-6">
+          <h3 className="mb-2 text-2xl font-bold text-white">{title}</h3>
+          <p className="mb-4 text-sm leading-relaxed text-neutral-300">{description}</p>
+          <div className="space-y-2 mb-6">
+            {subDescription.map((subDesc, index) => (
+              <div key={index} className="flex items-start gap-2 text-xs text-neutral-400">
+                <span className="text-sand mt-0.5">•</span>
+                <span>{subDesc}</span>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+            <div className="flex items-center gap-3">
               {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
-                />
+                <div key={tag.id} className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
+                  <img
+                    src={tag.path}
+                    alt={tag.name}
+                    className="w-4 h-4 object-contain"
+                  />
+                  <span className="text-xs text-neutral-300">{tag.name}</span>
+                </div>
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
-              View Project{" "}
-              <img src="assets/arrow-up.svg" className="size-4" href={href} />
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 font-medium text-sm text-white transition-all bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-lg shadow-lg hover:shadow-blue-500/25"
+            >
+              Explore Repository
+              <img src="assets/arrow-up.svg" className="w-4 h-4" alt="external link" />
             </a>
           </div>
         </div>
