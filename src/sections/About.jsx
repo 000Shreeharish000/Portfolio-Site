@@ -63,16 +63,31 @@ const About = () => {
           </div>
         </div>
 
-        {/* Scrollable Right Column (3D Parallax Highlights) */}
-        <div className="w-full lg:w-3/5 flex flex-col gap-24 lg:py-12">
-          {highlights.map((text, idx) => (
-            <ParallaxHighlightItem 
-              key={idx} 
-              text={text} 
-              index={idx + 1} 
-              containerRef={containerRef} 
+        {/* Scrollable Right Column with Faded Background Image */}
+        <div className="w-full lg:w-3/5 relative min-h-screen">
+          {/* Faded Background Image sticky behind scrolling text */}
+          <div className="lg:sticky top-32 h-[70vh] w-full rounded-3xl overflow-hidden pointer-events-none border border-white/10 shadow-2xl mb-[-70vh] relative z-0">
+            <img
+              src="/photos/20250731_164738.jpg"
+              alt="Shree Harish - IIT Madras Research"
+              className="w-full h-full object-cover object-center opacity-25 filter brightness-90 saturate-110"
             />
-          ))}
+            {/* Dark gradient overlay & vignette to ensure 100% text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#06060e] via-[#06060e]/70 to-[#06060e]/85" />
+            <div className="absolute inset-0 bg-radial from-transparent via-[#06060e]/40 to-[#06060e]" />
+          </div>
+
+          {/* Highlights scrolling on top */}
+          <div className="relative z-10 flex flex-col gap-24 py-12">
+            {highlights.map((text, idx) => (
+              <ParallaxHighlightItem 
+                key={idx} 
+                text={text} 
+                index={idx + 1} 
+                containerRef={containerRef} 
+              />
+            ))}
+          </div>
         </div>
         
       </div>
@@ -105,7 +120,7 @@ const ParallaxHighlightItem = ({ text, index, containerRef }) => {
         perspective: 1000,
         transformStyle: "preserve-3d"
       }}
-      className="relative flex flex-col justify-center min-h-[140px] pl-6 md:pl-12 border-l-2 border-white/10 hover:border-lavender/40 transition-colors duration-300 select-none group"
+      className="relative flex flex-col justify-center min-h-[140px] pl-6 md:pl-10 pr-6 py-6 border-l-2 border-white/15 hover:border-lavender/50 bg-black/30 backdrop-blur-xs rounded-r-2xl transition-all duration-300 select-none group"
     >
       {/* Background Floating Giant Number (drifts at a different rate for depth parallax) */}
       <motion.div
