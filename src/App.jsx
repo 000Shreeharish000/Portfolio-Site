@@ -3,6 +3,7 @@ import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
+import Gallery from "./sections/Gallery";
 import Experiences from "./sections/Experiences";
 import Achievements from "./sections/Achievements";
 import Contact from "./sections/Contact";
@@ -51,6 +52,7 @@ const App = () => {
       <About />
       <Experiences />
       <Projects onExploreClick={handleOpenProjects} />
+      <Gallery />
       <Achievements />
       <Contact />
       <Footer />
