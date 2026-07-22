@@ -27,6 +27,11 @@ const Contact = () => {
     setIsLoading(true);
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    console.log("Debugging access key:", {
+      value: accessKey,
+      type: typeof accessKey,
+      length: accessKey ? accessKey.length : 0
+    });
     
     if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
       console.warn("Web3Forms access key is missing. Please set VITE_WEB3FORMS_ACCESS_KEY in your .env file.");
