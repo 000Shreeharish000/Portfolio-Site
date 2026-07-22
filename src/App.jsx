@@ -7,7 +7,6 @@ import Experiences from "./sections/Experiences";
 import Achievements from "./sections/Achievements";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import ProjectsPage from "./pages/ProjectsPage";
 import GalleryPage from "./pages/GalleryPage";
 
 const App = () => {
@@ -17,9 +16,17 @@ const App = () => {
     const handleHashChange = () => {
       if (
         window.location.hash === "#all-projects" ||
-        window.location.hash === "#projects-page"
+        window.location.hash === "#projects-page" ||
+        window.location.hash === "#projects"
       ) {
-        setCurrentPage("projects");
+        setCurrentPage("home");
+        // Wait a small bit for react to render home page before scrolling if hash is updated on init
+        setTimeout(() => {
+          const element = document.getElementById("projects");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
       } else if (
         window.location.hash === "#gallery" ||
         window.location.hash === "#gallery-page"
@@ -31,12 +38,6 @@ const App = () => {
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
-
-  const handleOpenProjects = () => {
-    setCurrentPage("projects");
-    window.location.hash = "#projects-page";
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const handleOpenGallery = () => {
     setCurrentPage("gallery");
@@ -50,10 +51,6 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (currentPage === "projects") {
-    return <ProjectsPage onBack={handleBackToHome} />;
-  }
-
   if (currentPage === "gallery") {
     return <GalleryPage onBack={handleBackToHome} />;
   }
@@ -61,7 +58,6 @@ const App = () => {
   return (
     <div className="container mx-auto max-w-7xl">
       <Navbar
-        onExploreProjects={handleOpenProjects}
         onOpenGallery={handleOpenGallery}
       />
       <div id="home">
@@ -69,7 +65,7 @@ const App = () => {
       </div>
       <About />
       <Experiences />
-      <Projects onExploreClick={handleOpenProjects} />
+      <Projects />
       <Achievements />
       <Contact />
       <Footer />

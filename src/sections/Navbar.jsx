@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-function Navigation({ onExploreProjects, onOpenGallery }) {
+function Navigation({ onOpenGallery }) {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
@@ -27,23 +27,10 @@ function Navigation({ onExploreProjects, onOpenGallery }) {
       <li className="nav-li">
         <button
           onClick={onOpenGallery}
-          className="nav-link cursor-pointer hover:text-orange-400 transition-colors"
+          className="nav-link cursor-pointer"
         >
           Gallery
         </button>
-      </li>
-      <li className="nav-li">
-        <button
-          onClick={onExploreProjects}
-          className="text-xs font-semibold px-3 py-1 rounded-lg bg-blue-600/20 hover:bg-blue-600/40 text-blue-300 border border-blue-500/30 transition-all cursor-pointer"
-        >
-          Explore All 3D
-        </button>
-      </li>
-      <li className="nav-li">
-        <a className="nav-link" href="#achievements">
-          Achievements
-        </a>
       </li>
       <li className="nav-li">
         <a className="nav-link" href="#contact">
@@ -54,7 +41,7 @@ function Navigation({ onExploreProjects, onOpenGallery }) {
   );
 }
 
-const Navbar = ({ onExploreProjects, onOpenGallery }) => {
+const Navbar = ({ onOpenGallery }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
@@ -78,7 +65,6 @@ const Navbar = ({ onExploreProjects, onOpenGallery }) => {
           </button>
           <nav className="hidden sm:flex">
             <Navigation
-              onExploreProjects={onExploreProjects}
               onOpenGallery={onOpenGallery}
             />
           </nav>
@@ -94,7 +80,6 @@ const Navbar = ({ onExploreProjects, onOpenGallery }) => {
         >
           <nav className="pb-5">
             <Navigation
-              onExploreProjects={onExploreProjects}
               onOpenGallery={onOpenGallery}
             />
           </nav>
