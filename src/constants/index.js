@@ -1,6 +1,42 @@
 export const myProjects = [
   {
     id: 1,
+    title: "AI-Native CRM Application",
+    description:
+      "A full-stack, AI-native CRM platform built for D2C brands, featuring automated segment target dispatches, real-time social trend scanning, and webhook callback loops.",
+    subDescription: [
+      "Designed a real-time asynchronous dispatch loop (/api/campaigns/send) routing customer communications through an external simulated callback channel.",
+      "Integrated Gemini 2.5 Flash API to perform automated social trend scanning (TikTok, Instagram, Pinterest) and generate personalized campaign copy.",
+      "Engineered CSV shopper data ingestion tool with validation parsing directly into MongoDB, complete with interactive UI phone mockup for live event tracking.",
+    ],
+    href: "https://github.com/000Shreeharish000/AI-NATIVE-CRM-APPLICATION",
+    logo: "",
+    image: "/assets/projects/crm-dashboard.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js / React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Gemini AI",
+        path: "/assets/logos/vitejs.svg",
+      },
+      {
+        id: 3,
+        name: "MongoDB Atlas",
+        path: "/assets/logos/sqlite.svg",
+      },
+      {
+        id: 4,
+        name: "Tailwind CSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Digital Governance Ecosystem Audit System",
     description:
       "Enterprise-grade AI-powered fraud detection and compliance governance system built on graph intelligence, multi-agent orchestration, and cryptographic audit trails (Decision & Financial Digital Twin Platform).",
@@ -36,7 +72,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Medical ERP System for SRM Trichy Hospital",
     description:
       "Designed a role-based Hospital ERP system supporting 7+ user roles (Doctor, Nurse, Ambulance, Logistics, etc.) with strict RBAC, workflow isolation, and audit logging across all modules.",
@@ -72,7 +108,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Core Java Attendance Management System",
     description:
       "Built a pure Java attendance tracking system using Core Java, Java Swing, JDBC, and MySQL with a modular GUI and custom persistence layer.",
