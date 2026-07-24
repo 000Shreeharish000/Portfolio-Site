@@ -1,9 +1,6 @@
+# 🚀 Shree Harish Vijayaprakash | 3D Developer Portfolio
 
-# 🚀 3D Developer Portfolio
-
-A modern, animated 3D developer portfolio built with React, Three.js, TailwindCSS, and motion effects — designed to help you stand out and showcase your skills creatively.
-
-![3d Portfolio Screenshot GitHub](https://github.com/user-attachments/assets/9b0ed20e-074e-4f2a-81d8-20c9da751e9e)
+A modern, highly interactive 3D developer portfolio showcasing advanced AI, full-stack, and Web3 projects. Built using React, Three.js (React Three Fiber & Drei), Tailwind CSS v4, Framer Motion, and interactive canvas components.
 
 ---
 
@@ -13,37 +10,35 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
-- [Assets](#-assets)
+- [Environment Configuration](#-environment-configuration)
+- [Featured Projects](#-featured-projects)
 - [Contact Me](#-contact-me)
-- [Suggestions or Feedback](#-suggestions-or-feedback)
-- [Like This Project?](#-like-this-project)
 
 ---
 
 ## ✨ Features
 
-- 🔥 3D visuals powered by **React Three Fiber** and **Drei**
-- ⚡ Smooth transitions and scroll-based animations using **Framer Motion**
-- 🎨 Clean, responsive UI with **TailwindCSS**
-- 💌 Working contact form using **EmailJS**
-- 🧱 Beautiful UI enhancements with **Aceternity UI** and **Magic UI**
-- 🚀 Lightning-fast development with **Vite**
+- 🔥 **3D Visuals & Shaders**: Immersive experiences powered by **React Three Fiber** and **Drei**.
+- ⚡ **Smooth Transitions**: Scroll-based animations and interactive layouts using **Framer Motion** (motion).
+- 🌍 **Interactive 3D Globe**: Dynamic globe visualization using **Cobe**.
+- 🎨 **Sleek Modern UI**: Clean, responsive layout designed with **Tailwind CSS v4**.
+- 📬 **Working Contact Form**: Fast, serverless email delivery integrated via **Web3Forms API**.
+- 📂 **Multi-Page Layout**: Dedicated Gallery and Projects views for structured project exploration.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Tech              | Description                           |
-|-------------------|---------------------------------------|
-| React             | Front-end JavaScript library          |
-| Vite              | Fast bundler and dev environment      |
-| TailwindCSS       | Utility-first CSS framework           |
-| React Three Fiber | 3D rendering with Three.js in React   |
-| Drei              | Helpers and abstractions for R3F      |
-| Framer Motion     | Animation library for React           |
-| EmailJS           | Form handling and email integration   |
-| Aceternity UI     | Custom UI components                  |
-| Magic UI          | Prebuilt UI elements and design extras|
+| Tech              | Description                                             |
+|-------------------|---------------------------------------------------------|
+| React 19          | Front-end JavaScript library                            |
+| Vite 6            | Fast bundler and development environment                |
+| Tailwind CSS v4   | Utility-first CSS styling                               |
+| React Three Fiber | 3D rendering with Three.js in React                     |
+| Drei              | Helpers, controls, and abstractions for Three.js        |
+| Framer Motion     | Animation library for React components                  |
+| Cobe              | Lightweight interactive 3D globe                        |
+| Web3Forms         | Serverless contact form submission                      |
 
 ---
 
@@ -51,67 +46,68 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 
 ```bash
 ├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
+│   ├── assets/             # Images, textures, logos, and projects assets
+│   ├── models/             # 3D Astronaut and scene models
 │   └── vite.svg
 ├── src/
-│   ├── components/         # Reusable components
-│   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
-│   ├── App.jsx             # Main app file
-│   ├── index.css           # Tailwind css
-│   └── main.jsx            # Entry point
-├── tailwind.config.js
-└── vite.config.js
+│   ├── components/         # Reusable UI & Canvas elements (Alert, Particles, etc.)
+│   ├── constants/          # Site text, social links, experiences, and projects data
+│   ├── pages/              # Full-page templates (GalleryPage, ProjectsPage)
+│   ├── sections/           # Main sections (Navbar, Hero, About, Projects, Experiences, Contact, Footer)
+│   ├── App.jsx             # Root layout and router state
+│   ├── index.css           # Global CSS styles (Tailwind config)
+│   └── main.jsx            # React application entry point
+├── .env.example            # Environment variables example template
+├── tailwind.config.js      # Custom theme configurations
+└── vite.config.js          # Vite config & plugins
 ```
 
 ---
 
 ## 🚀 Getting Started
-1. Clone the Repository
+
+Follow these steps to set up and run the project locally.
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
-cd Portfolio
+git clone https://github.com/000Shreeharish000/Portfolio-Site.git
+cd Portfolio-Site
 ```
-2. Install Dependencies
+
+### 2. Install Dependencies
 ```bash
 npm install
 ```
-3. Run the Development Server
+
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory and add your Web3Forms Access Key:
+```bash
+VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
+```
+*(Get a free access key at [web3forms.com](https://web3forms.com))*
+
+### 4. Run the Development Server
 ```bash
 npm run dev
 ```
-The app will be available at http://localhost:5173.
+The app will be running at `http://localhost:5173`.
 
 ---
 
-## 🔗 Assets
-Assets used in the project can be found [here](https://github.com/user-attachments/files/19820923/public.zip)
+## 💡 Featured Projects
+
+Some of the main projects showcased in this portfolio include:
+1. **AI-Native CRM Application**: Full-stack CRM for D2C brands utilizing Gemini 2.5 Flash API for trend scanning and automated campaigns.
+2. **Digital Governance Ecosystem Audit System**: Top 50 Deloitte Hackathon winner; multi-agent AI orchestration system featuring real-time fraud detection and 3D graph representation.
+3. **Medical ERP System for SRM Trichy Hospital**: Winner of MedAlthon Hackathon; role-based hospital management ERP built with Postgres, Node.js, and TypeScript.
+4. **Core Java Attendance Management System**: High-performance Swing and JDBC-based modular attendance tracker.
 
 ---
 
 ## 📬 Contact Me
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://www.instagram.com/ali.sanatidev/reels/) 
-[![Static Badge](https://img.shields.io/badge/Youtube-%23FF0033?style=flat&logo=youtube)](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-sanati/) 
 
----
+Let's connect and build something amazing together!
 
-## 💡 Suggestions or Feedback?
-Leave a comment on the [YouTube video](https://youtu.be/S9UQItTpwUQ) or open an issue here on GitHub.<br/>
-👉 What should I build next?
-
-- A beautiful Landing Page
-
-- A complete E-commerce site
-
-- A fun App Clone (YouTube, Netflix, etc.)
-
-Or another interactive Portfolio
-
-Let me know!
-
----
-
-## ⭐ Like This Project?
-Star the repo and [subscribe](https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA??sub_confirmation=1) to the YouTube channel for more dev content!
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/000Shreeharish000)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shree-harish-vijayaprakash)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919585253883)
